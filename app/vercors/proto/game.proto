@@ -23,3 +23,24 @@
 
 syntax = "proto3";
 package app.vercors.proto;
+
+message GameVersionList {
+  string recommended = 1;
+  string latest = 2;
+  repeated GameVersion versions = 3;
+}
+
+message GameVersion {
+  string id = 1;
+  GameVersionType type = 2;
+  uint64 time = 3;
+  string url = 4;
+  string sha1 = 5;
+}
+
+enum GameVersionType {
+  release = 0;
+  snapshot = 1;
+  beta = 2;
+  alpha = 3;
+}

@@ -26,7 +26,7 @@ import "app/vercors/proto/project.proto";
 package app.vercors.proto;
 
 message HomeResponse {
-  repeated HomeSection section = 1;
+  repeated HomeSection sections = 1;
 }
 
 message HomeSection {
